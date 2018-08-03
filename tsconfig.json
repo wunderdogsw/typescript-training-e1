@@ -8,7 +8,6 @@
     "noUnusedParameters": false,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "jsx": "react",
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
