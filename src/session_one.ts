@@ -70,7 +70,7 @@ export interface User {
 }
 
 /**
- * Get users name, or nick name if one exists
+ * Get users nick name, or return a name if one doesn't exist
  */
 export function getUserHandle(user: User): string {
   return ''
