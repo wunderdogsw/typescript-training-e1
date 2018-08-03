@@ -1,5 +1,5 @@
 import * as first from '~/session_one'
-import { Vec2, Vec3 } from '~/session_one'
+import { Vec2, Vec3, Country } from '~/session_one'
 
 describe('Session one', () => {
   describe('sum(a, b)', () => {
@@ -116,4 +116,128 @@ describe('Session one', () => {
           })
         })
       })
+
+    describe('isNumber', () => {
+      it('should return false when value is string', () => {
+        expect(first.isNumber('string')).toBe(false)
+      })
+
+      it('should return false when value is array', () => {
+        expect(first.isNumber('string')).toBe(false)
+      })
+
+      it('should return true when value is integer', () => {
+        expect(first.isNumber(32)).toBe(true)
+      })
+
+      it('should return true when value is floating point', () => {
+        expect(first.isNumber(32.3)).toBe(true)
+      })
+    })
+
+    describe('isCountry', () => {
+      const { isCountry } = first
+      const country: Country = {
+        name: 'Finland',
+        code: 'fi',
+        population: 5700000
+      }
+
+      const cases = [
+        {
+          input: country,
+          result: true
+        },
+        {
+          input: {
+            name: 'Finland',
+            code: 'fi'
+          },
+          result: false
+        },
+        {
+          input: {
+            code: 'fi',
+            population: 5700000
+          },
+          result: false,
+        },
+        {
+          input: {
+            name: 'Finland',
+            population: 5700000
+          },
+          result: false,
+        }
+      ]
+      cases.forEach(({input, result}) =>  {
+        it(`should return ${result} for (${input}) `, () => {
+          expect(isCountry.apply(null, input)).toEqual(result)
+        })
+      })
+    })
+
+    describe('greaterThanNumber', () => {
+      const { greaterThanNumber} = first
+      const cases = [
+        {
+          input: [[1,2,3], 2],
+          result: [3]
+        },
+        {
+          input: [[], 2],
+          result: []
+        },
+        {
+          input: [[2,3,4], 2],
+          result: [3,4]
+        }
+      ]
+      cases.forEach(({input, result}) =>  {
+        it(`should return ${result} for ([${input.join('], ')}) `, () => {
+          expect(greaterThanNumber.apply(null, input)).toEqual(result)
+        })
+      })
+    })
+
+    describe('toPowerOf', () => {
+      const { toPowerOf } = first
+      const cases = [
+        {
+          input: [[1,2, 3], 2],
+          result: [1, 4, 9]
+        },
+        {
+          input: [[], 0],
+          result: []
+        },
+        {
+          input: [[1, 2, 3], 1],
+          result: [1, 2, 3]
+        },
+        {
+          input: [[1, 2, 3], 1],
+          result: [1, 2, 3]
+        },
+        {
+          input: [[1, 2, 3], 0],
+          result: [1, 1, 1]
+        }
+      ]
+      cases.forEach(({input, result}) =>  {
+        it(`should return ${result} for ([${input.join('], ')})`, () => {
+          expect(toPowerOf.apply(null, input)).toEqual(result)
+        })
+      })
+    })
+
+    describe('getUserHandle', () => {
+      it("should get users name if no nick doesn't exist", () => {
+        expect(first.getUserHandle({ name: 'Jane' })).toBe('Jane')
+      })
+
+      it('should get users nick if nick it exist', () => {
+        expect(first.getUserHandle({ name: 'Jane', nick: 'jd' })).toBe('jd')
+      })
+    })
 })

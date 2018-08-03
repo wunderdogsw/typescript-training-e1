@@ -5,7 +5,7 @@
     "module": "commonjs",
     "target": "es2017",
     "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    "noUnusedParameters": false,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "jsx": "react",

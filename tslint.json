@@ -23,6 +23,7 @@
       "allow-leading-underscore"
     ],
     "import-name": false,
-    "ter-arrow-parens": false
+    "ter-arrow-parens": false,
+    "no-unused-variable": false
   }
 }

@@ -1,8 +1,10 @@
+const TODO = () => Error('Not implemented')
+
 /**
  * 1: Return the sum of two numbers
  */
 
-export function sum(_a: number, _b: number): number {
+export function sum(a: number, b: number): number {
   return NaN
 }
 
@@ -15,19 +17,19 @@ export interface Vec2 {
   y: number
 }
 
- export function lengthVec2(_v: Vec2): number {
-   return NaN
- }
+export function lengthVec2(v: Vec2): number {
+  return NaN
+}
 
  /**
   * Calculate the length of a Vec3
   */
 
- export interface Vec3 extends Vec2 {
+export interface Vec3 extends Vec2 {
    z: number
- }
+}
 
-export function lengthVec3(_v: Vec3): number {
+export function lengthVec3(v: Vec3): number {
   return NaN
 }
 
@@ -35,7 +37,7 @@ export function lengthVec3(_v: Vec3): number {
   * Calculate the nth Fibonacci number
   */
 
-export function fibo(_n: number): number {
+export function fibo(n: number): number {
  return NaN
 }
 
@@ -43,15 +45,62 @@ export function fibo(_n: number): number {
  * Return the longest string of three
  */
 
- export function longestOfThree(_a: string, _b: string, _c: string): string {
+export function longestOfThree(a: string, b: string, c: string): string {
    return ''
- }
+}
 
  /**
   * Return the longest string of many
   */
 
-  export function longestOfMany(..._strings: string[]): string {
+export function longestOfMany(...strings: string[]): string {
     return ''
-  }
+}
 
+/**
+ * Check if a value is a number
+ */
+export function isNumber(value: any): value is number {
+  throw TODO()
+}
+
+export interface User {
+  name: string
+  nick?: string
+}
+
+/**
+ * Get users name, or nick name if one exists
+ */
+export function getUserHandle(user: User): string {
+  return ''
+}
+
+export interface Country {
+  name: string,
+  code: string,
+  population: number
+}
+
+/**
+ * Test if a given object is a Country
+ */
+export function isCountry(obj: unknown): obj is Country {
+  throw TODO()
+}
+
+/**
+ * Return an array only with elements that are greater than the param n
+ */
+
+export function greaterThanNumber(input: Array<number>, n: number): Array<number> {
+  return []
+}
+
+/**
+ * Return the power of n for each value in the input array
+ */
+
+export function toPowerOf(input: Array<number>, n: number): Array<number> {
+  return []
+}
