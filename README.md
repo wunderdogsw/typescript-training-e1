@@ -8,11 +8,12 @@ The function stubs are accompanied by tests in `test/session_one.tests.ts`. When
 
 ### Running the tests
 ```bash
-yarn test
+yarn install
+yarn watch
 ```
 
 ### Working with the exercises
 ```
-Open the `src/session_one.ts` in an editor wit TypeScript support, fill in the behavior to the function stubs and run the test set.
+Open the `src/session_one.ts` in an editor with TypeScript support (a recent version of VS Code is highly recommended), fill in the behavior to the function stubs and run the test set.
 
-As long as there are failing tests, just keep repeating the process.
+As long as there are failing tests, just keep repeating the process. Enjoy!
