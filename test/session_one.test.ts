@@ -20,7 +20,7 @@ describe('Session one', () => {
         x: 1,
         y: 1,
       }
-      expect(lengthVec2(v)).toEqual(1)
+      expect(lengthVec2(v)).toEqual(Math.sqrt(2))
     })
 
     it('should solve the length of (4,7)', () => {
@@ -40,7 +40,7 @@ describe('Session one', () => {
         y: 1,
         z: 1,
       }
-      expect(lengthVec3(v)).toEqual(1)
+      expect(lengthVec3(v)).toEqual(Math.sqrt(3))
     })
 
     it('should solve the length of (4,7,11)', () => {
