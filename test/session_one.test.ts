@@ -171,8 +171,9 @@ describe('Session one', () => {
         }
       ]
       cases.forEach(({input, result}) =>  {
-        it(`should return ${result} for (${input}) `, () => {
-          expect(isCountry.apply(null, input)).toEqual(result)
+        const prettyInput: string = Object.entries(input).map(pair => pair.join(': ')).join(', ')
+        it(`should return ${result} for { ${prettyInput} } `, () => {
+          expect(isCountry.apply(null, [input])).toEqual(result)
         })
       })
     })
