@@ -1,6 +1,11 @@
 import * as first from '~/session_one'
 import { Vec2, Vec3, Country } from '~/session_one'
 
+type TestCaseSet<I, R> = Array<{
+  input: I,
+  result: R
+}>
+
 describe('Session one', () => {
   describe('sum(a, b)', () => {
     const { sum } = first
@@ -180,7 +185,8 @@ describe('Session one', () => {
 
     describe('greaterThanNumber', () => {
       const { greaterThanNumber} = first
-      const cases = [
+      type ToPowerOfInput = [number[], number]
+      const cases: TestCaseSet<ToPowerOfInput, number[]> = [
         {
           input: [[1,2,3], 2],
           result: [3]
@@ -203,7 +209,8 @@ describe('Session one', () => {
 
     describe('toPowerOf', () => {
       const { toPowerOf } = first
-      const cases = [
+      type ToPowerOfInput = [number[], number]
+      const cases: TestCaseSet<ToPowerOfInput, number[]> = [
         {
           input: [[1,2, 3], 2],
           result: [1, 4, 9]

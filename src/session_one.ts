@@ -5,7 +5,7 @@ const TODO = () => Error('Not implemented')
  */
 
 export function sum(a: number, b: number): number {
-  return NaN
+  throw TODO()
 }
 
 /**
@@ -18,7 +18,7 @@ export interface Vec2 {
 }
 
 export function lengthVec2(v: Vec2): number {
-  return NaN
+  throw TODO()
 }
 
  /**
@@ -30,7 +30,7 @@ export interface Vec3 extends Vec2 {
 }
 
 export function lengthVec3(v: Vec3): number {
-  return NaN
+  throw TODO()
 }
 
  /**
@@ -38,7 +38,7 @@ export function lengthVec3(v: Vec3): number {
   */
 
 export function fibo(n: number): number {
- return NaN
+    throw TODO()
 }
 
 /**
@@ -46,7 +46,7 @@ export function fibo(n: number): number {
  */
 
 export function longestOfThree(a: string, b: string, c: string): string {
-   return ''
+    throw TODO()
 }
 
  /**
@@ -54,7 +54,7 @@ export function longestOfThree(a: string, b: string, c: string): string {
   */
 
 export function longestOfMany(...strings: string[]): string {
-    return ''
+    throw TODO()
 }
 
 /**
@@ -73,7 +73,7 @@ export interface User {
  * Get users nick name, or return a name if one doesn't exist
  */
 export function getUserHandle(user: User): string {
-  return ''
+  throw TODO()
 }
 
 export interface Country {
@@ -94,7 +94,7 @@ export function isCountry(obj: unknown): obj is Country {
  */
 
 export function greaterThanNumber(input: Array<number>, n: number): Array<number> {
-  return []
+  throw TODO()
 }
 
 /**
@@ -102,5 +102,5 @@ export function greaterThanNumber(input: Array<number>, n: number): Array<number
  */
 
 export function toPowerOf(input: Array<number>, n: number): Array<number> {
-  return []
+  throw TODO()
 }
