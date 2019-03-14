@@ -15,8 +15,10 @@ npm run watch
 
 ### Working with the exercises
 
-```
 Open the `src/session_one.ts` in an editor with TypeScript support (a recent version of VS Code is highly recommended), fill in the behavior to the function stubs and run the test set.
 
 As long as there are failing tests, just keep repeating the process. Enjoy!
-```
+
+### Problems?
+
+Please report the issues to the issue tracker.
