@@ -1,3 +1,0 @@
-{
-  "extends": ["./tslint.typestrict.json", "./tslint.json"]
-}

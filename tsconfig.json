@@ -1,27 +1,27 @@
 {
-  "compilerOptions": {
-    "outDir": "ts-build",
-    "sourceMap": true,
-    "module": "commonjs",
-    "target": "es2017",
-    "noUnusedLocals": true,
-    "noUnusedParameters": false,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "lib": ["es2017", "dom"],
-    "allowJs": true,
-    "plugins": [
-      {
-        "name": "tslint-language-service",
-        "configFile": "./tslint.typestrict.json"
-      }
-    ],
-    "baseUrl": ".",
-    "paths": {
-      "~/*": ["./src/*"]
+    "compilerOptions": {
+        "outDir": "ts-build",
+        "sourceMap": true,
+        "module": "commonjs",
+        "target": "es2017",
+        "noUnusedLocals": true,
+        "noUnusedParameters": false,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "moduleResolution": "node",
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "lib": ["es2017", "dom"],
+        "allowJs": true,
+        "plugins": [
+            {
+                "name": "tslint-language-service",
+                "configFile": "./tslint.json"
+            }
+        ],
+        "baseUrl": ".",
+        "paths": {
+            "~/*": ["./src/*"]
+        }
     }
-  }
 }
