@@ -1,40 +1,43 @@
 {
-  "name": "exercise-one",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "build": "tsc",
-    "test": "jest test/*",
-    "watch": "jest --watch test/*"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@types/jest": "^23.3.1",
-    "jest": "^23.4.2",
-    "ts-jest": "^23.0.1",
-    "tslint": "^5.11.0",
-    "tslint-language-service": "^0.9.9",
-    "typescript": "^3.3.3333",
-    "typestrict": "^1.0.2"
-  },
-  "jest": {
-    "testURL": "file:/",
-    "transform": {
-      "^.+\\.tsx?$": "ts-jest"
+    "name": "exercise-one",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "build": "tsc",
+        "test": "jest test/*",
+        "lint": "tslint --project tsconfig.json src/*",
+        "watch": "jest --watch test/*"
     },
-    "moduleNameMapper": {
-      "~/(.*)": "<rootDir>/src/$1"
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/jest": "^23.3.14",
+        "jest": "^23.6.0",
+        "ts-jest": "^23.10.5",
+        "tslint": "^5.11.0",
+        "tslint-config-airbnb": "^5.11.1",
+        "tslint-config-prettier": "^1.18.0",
+        "tslint-language-service": "^0.9.9",
+        "typescript": "^3.3.3333",
+        "typestrict": "^1.0.2"
     },
-    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json",
-      "node"
-    ]
-  }
+    "jest": {
+        "testURL": "file:/",
+        "transform": {
+            "^.+\\.tsx?$": "ts-jest"
+        },
+        "moduleNameMapper": {
+            "~/(.*)": "<rootDir>/src/$1"
+        },
+        "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+        "moduleFileExtensions": [
+            "ts",
+            "tsx",
+            "js",
+            "jsx",
+            "json",
+            "node"
+        ]
+    }
 }

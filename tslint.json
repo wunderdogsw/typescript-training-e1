@@ -1,5 +1,5 @@
 {
-    "extends": ["tslint-config-airbnb", "typestrict"],
+    "extends": ["tslint-config-airbnb", "typestrict", "tslint-config-prettier"],
     "rules": {
         "trailing-comma": [
             true,
@@ -7,9 +7,7 @@
                 "esSpecCompliant": true,
                 "multiline": {
                     "objects": "always",
-                    "arrays": "always",
-                    "functions": "always",
-                    "typeLiterals": "never"
+                    "arrays": "always"
                 },
                 "singleline": "never"
             }
@@ -24,6 +22,7 @@
         ],
         "import-name": false,
         "ter-arrow-parens": false,
-        "no-unused-variable": false
+        "no-unused-variable": false,
+        "prefer-array-literal": [true, { "allow-type-parameters": true }]
     }
 }

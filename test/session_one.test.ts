@@ -1,5 +1,4 @@
 import * as first from '~/session_one'
-import { Vec2, Vec3, Country } from '~/session_one'
 
 type TestCaseSet<I, R> = Array<{
     input: I
@@ -21,7 +20,7 @@ describe('Session one', () => {
     describe('lengthVec2(v)', () => {
         const { lengthVec2 } = first
         it('should solve the length of (1,1)', () => {
-            const v: Vec2 = {
+            const v: first.Vec2 = {
                 x: 1,
                 y: 1,
             }
@@ -29,7 +28,7 @@ describe('Session one', () => {
         })
 
         it('should solve the length of (4,7)', () => {
-            const v: Vec2 = {
+            const v: first.Vec2 = {
                 x: 4,
                 y: 7,
             }
@@ -40,7 +39,7 @@ describe('Session one', () => {
     describe('lengthVec3(v)', () => {
         const { lengthVec3 } = first
         it('should solve the length of (1,1,1)', () => {
-            const v: Vec3 = {
+            const v: first.Vec3 = {
                 x: 1,
                 y: 1,
                 z: 1,
@@ -49,7 +48,7 @@ describe('Session one', () => {
         })
 
         it('should solve the length of (4,7,11)', () => {
-            const v: Vec3 = {
+            const v: first.Vec3 = {
                 x: 4,
                 y: 7,
                 z: 11,
@@ -148,7 +147,7 @@ describe('Session one', () => {
 
     describe('isCountry', () => {
         const { isCountry } = first
-        const country: Country = {
+        const country: first.Country = {
             name: 'Finland',
             code: 'fi',
             population: 5700000,
